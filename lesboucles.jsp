@@ -77,19 +77,29 @@
 
 <%-- Boucle for pour afficher une ligne d'étoiles exc 6 --%>
     <p>
-    <% for (int i = 1; i <= cpt; i++) { %>
-    <% for (int j = 1; j <= i; j++) { %>
+    <% for (int i = 0; i < cpt; i++) { %>
+    <% for (int j = 0; j < cpt - i; j++) { %>
+       <%= "&nbsp;" %>
+    <% } %>
+    <% for (int k = 0; k <= i; k++) { %>
        <%= "*" %>
     <% } %>
        <%= "</br>" %>
     <% } %>
+
     <% for (int i = 0; i < cpt; i++) { %>
     <% for (int j = 0; j < cpt - i; j++) { %>
        <%= "*" %>
     <% } %>
+    <% for (int k = 0; k <= i; k++) { %>
+       <%= "&nbsp;" %>
+    <% } %>
        <%= "</br>" %>
     <% } %>
     </p>
+
+
+
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
