@@ -98,8 +98,13 @@
     <% } %>
     </p>
 
+<%-- La table de multiplication exc 7 --%>
 
-
+<p>
+<% for (int i = 1; i <= cpt; i++) { %>
+<%= i + " x " + cpt + " = " + (i * cpt) %><br> %>
+<% } %>
+</p>
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
