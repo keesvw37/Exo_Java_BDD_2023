@@ -28,8 +28,7 @@
     <% } %>
     </p>
 
-<%-- Boucle for pour afficher une ligne d'étoiles exc 1 --%>
-    <%int cpt = Integer.parseInt(valeur); %>
+<%-- Boucle for pour afficher une ligne d'étoiles exc 2 --%>
     <p>
     <% for (int i = 1; i <= cpt; i++) { %>
     <% for (int j = 1; j <= j; j++) { %>
