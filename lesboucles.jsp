@@ -17,11 +17,22 @@
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
-<%-- Boucle for pour afficher une ligne d'étoiles --%>
+<%-- Boucle for pour afficher une ligne d'étoiles exc 1 --%>
     <%int cpt = Integer.parseInt(valeur); %>
     <p>
     <% for (int i = 1; i <= cpt; i++) { %>
     <% for (int j = 1; j <= cpt; j++) { %>
+       <%= "*" %>
+    <% } %>
+       <%= "</br>" %>
+    <% } %>
+    </p>
+
+<%-- Boucle for pour afficher une ligne d'étoiles exc 1 --%>
+    <%int cpt = Integer.parseInt(valeur); %>
+    <p>
+    <% for (int i = 1; i <= cpt; i++) { %>
+    <% for (int j = 1; j <= j; j++) { %>
        <%= "*" %>
     <% } %>
        <%= "</br>" %>
