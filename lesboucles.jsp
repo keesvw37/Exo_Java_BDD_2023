@@ -55,12 +55,11 @@
        <%= "&nbsp;" %>
     <% } %>
     <% for (int k = 0; k <= j; k++) { %>
+       <%= "*" %>
     <% } %>
        <%= "</br>" %>
     <% } %>
     </p>
-
-
 
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
