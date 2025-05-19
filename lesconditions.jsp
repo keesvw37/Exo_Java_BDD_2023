@@ -34,7 +34,7 @@
 
     <%-- Comparaison 1 --%>
 
-        <% if ((intValeur3 >= intValeur1 && intValeur3 <= intValeur2) || (intValeur3 >= intValeur2 && intValeur3 <= intValeur3)) { %>
+        <% if ((intValeur3 >= intValeur1 && intValeur3 <= intValeur2) || (intValeur3 >= intValeur2 && intValeur3 <= intValeur1)) { %>
             <p>C est compris entre A et B</p>
         <% } else { %>
             <p>C n'est pas compris entre A et B</p>
