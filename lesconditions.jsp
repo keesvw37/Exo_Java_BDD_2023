@@ -39,6 +39,27 @@
         <% } else { %>
             <p>C n'est pas compris entre A et B</p>
         <% } %>
+
+    <%-- Pair ou Impair ? --%>
+
+    <%    boolean isPrime = true;
+
+                if (intValeur1 <= 1) {
+                    isPrime = false;
+                } else {
+                    for (int i = 2; i <= Math.sqrt(intValeur1); i++) {
+                        if (intValeur1 % i == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+                if (isPrime) {
+                      <p>Valeur 1 est pair</p>
+                } else {
+                      <p>Valeur 1 est impair</p>
+                }
+    %>
     
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
