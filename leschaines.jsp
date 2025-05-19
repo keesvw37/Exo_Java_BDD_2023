@@ -42,6 +42,16 @@
         }
     %>
     <p>Le charactère '<%= recherche %>' apparait <strong><%= count %></strong> fois(s) dans le texte.</p>
+
+   <%-- Affichage verticale --%>
+        <p>
+        <%
+            for (int i = 0; i < chaine.length(); i++) {
+                char c = chaine.charAt(i);
+        %>
+                <%= c %><br>
+        <% } %>
+        </p>
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
