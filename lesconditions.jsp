@@ -54,12 +54,12 @@
                         }
                     }
                 }
-                if (isPrime) {
-                      <p>Valeur 1 est pair</p>
-                } else {
-                      <p>Valeur 1 est impair</p>
-                }
     %>
+    <% if (isPrime) { %>
+        <p>Valeur 1 est pair</p>
+    <% } else { %>
+        <p>Valeur 1 est impair</p>
+    <% } %>
     
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
