@@ -19,12 +19,21 @@
     <p>La tableau contient <%= tableauDeChiffres.length %> valeurs</br>
     Chiffre 1 : <%= Integer.parseInt(tableauDeChiffres[0]) %></br>
     Chiffre 2 : <%= Integer.parseInt(tableauDeChiffres[1]) %></br>
-    Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %></p>
+    Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %>
+    </p>
+
+    <%-- Conversion to an numeric array--%>
+    <%
+    int[] chiffres = new int[tableauDeChiffres.length];
+    for (int i = 0; i < parts.length; i++) {
+        tableauDeChiffres[i] = Integer.parseInt(tableauDeChiffres[i]);
+    }
+    %>
     
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 
-<p> La carré de la première valeur est <%= Math.sqrt(tableauDeChiffres[0]) %> </p>
+<p> Le carré de la première valeur est <%= tableauDeChiffres[0] * tableauDeChiffres[0] %> </p>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
