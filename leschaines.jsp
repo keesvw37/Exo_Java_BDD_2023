@@ -73,7 +73,21 @@
             <% } %>
  </p>
 
-<p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
+<%-- Exercice 6 : Consonnes et voyelles --%>
+<%
+        int countConson = 0;
+        int countVoyelles = 0;
+        String voyelles = "aeiouyAEIOUY" ;
+        for (int i = 0; i < chaine.length(); i++) { 
+            if (voyelles.indexOf(chaine.charAt(i)) >= 0) { 
+            countVoyelles++; 
+            }
+            else {
+            countConson++;
+            }
+        } 
+%>
+<p>Il y a '<%= countVoyelles %>' voyelles et  <%= countConson %> consonnes dans le texte.</p>
 
 
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
