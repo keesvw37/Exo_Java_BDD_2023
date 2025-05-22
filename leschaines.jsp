@@ -64,13 +64,16 @@
         </p>
 
 <%-- Afficher une lettre sur deux --%>
-<% char caractereSurDeux = chaine.charAt(i); %>
+
+<p>
 <%
         for (int i = 0; i < chaine.length(); i+2) {
             char c = chaine.charAt(i);
+            = c;
             }
         }
 %>
+ </p>
 
 <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
 
