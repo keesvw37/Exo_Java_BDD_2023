@@ -33,7 +33,7 @@
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 
-<p> Le carré de la première valeur est <%= chiffres[0] * chiffres[0] %> </p>
+<p> Le carré de la première valeur est <%= chiffres[0] * chiffres[1] %> </p>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
