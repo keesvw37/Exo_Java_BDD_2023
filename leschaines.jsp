@@ -67,12 +67,10 @@
 
 <p>
 <%
-        for (int i = 0; i < chaine.length(); i+2) {
-            char c = chaine.charAt(i);
-            = c;
-            }
-        }
-%>
+        for (int i = 0; i < chaine.length(); i+=2) { 
+            char c = chaine.charAt(i); %>
+            <%= c %>
+            <% } %>
  </p>
 
 <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
