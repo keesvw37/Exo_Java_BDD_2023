@@ -24,15 +24,37 @@
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 
+<p> La carré de la première valeur est <%= Math.sqrt(tableauDeChiffres[0]) %> </p>
+
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
+
+<p> La somme des 2 premières valeur est <%= ((tableauDeChiffres[0])+(tableauDeChiffres[0])) %></p>
 
 <h2>Exercice 3 : La somme de toutes les valeurs</h2>
 <p>L'utilisateur peut à présent saisir autant de valeurs qu'il le souhaite dans champs de saisie.</br>
 Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'utilisateur</p>
 
+<%
+    int sum = 0;
+    for (int i = 0; i < tableauDeChiffres.length; i++) {
+        sum += tableauDeChiffres[i];
+    }
+%>
+<p> La somme de toutes les valeurs <%= sum %></p>
+
 <h2>Exercice 4 : La valeur maximum</h2>
 <p>Ecrire un programme pour afficher la valeur maximale saisie par l'utilisateur</p>
+
+<%
+    int max = 0;
+    for (int i = 0; i < tableauDeChiffres.length; i++) {
+        if (tableauDeChiffres[i] > max) {
+            max = tableauDeChiffres[i]; 
+        }
+    }
+%>
+<p> La valeur maximum est  <%= max %></p>
 
 <h2>Exercice 5 : La valeur minimale</h2>
 <p>Ecrire un programme pour afficher la valeur minimale saisie par l'utilisateur</p>
