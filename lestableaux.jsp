@@ -66,6 +66,16 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
 <h2>Exercice 5 : La valeur minimale</h2>
 <p>Ecrire un programme pour afficher la valeur minimale saisie par l'utilisateur</p>
 
+<%
+    int min = chiffres[0];
+    for (int i = 0; i < chiffres.length; i++) {
+        if (chiffres[i] < min) {
+            min = chiffres[i]; 
+        }
+    }
+%>
+<p> La valeur maximum est  <%= max %></p>
+
 <h2>Exercice 6 : La valeur le plus proche de 0</h2>
 <p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
 
