@@ -25,7 +25,7 @@
         for (int i = 0; i < tableauDeChiffres.length; i++) {
             chiffres[i] = Integer.parseInt(tableauDeChiffres[i]);
     %>
-     Chiffre <%= i %> : <%= chiffres[i] %><br>
+     Chiffre <%= i + 1 %> : <%= chiffres[i] %><br>
     <% } %>
     
 <h2>Exercice 1 : La carré de la première valeur</h2>
