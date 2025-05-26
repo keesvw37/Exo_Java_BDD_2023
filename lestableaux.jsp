@@ -79,6 +79,16 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
 <h2>Exercice 6 : La valeur le plus proche de 0</h2>
 <p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
 
+<%
+    int plus = chiffres[0];
+    for (int i = 1; i < chiffres.length; i++) {
+        if (Math.abs(chiffres[i]) < Math.abs(plus)) {
+            plus = chiffres[i];
+        }
+    }
+%>
+<p> La valeur mLa valeur le plus proche de 0 est <%= plus %></p>
+
 <h2>Exercice 7 : La valeur le plus proche de 0 (2° version)</h2>
 <p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
 <p>En cas d'égalité entre un chiffre positif et négatif, affichez le chiffre positif</p>
