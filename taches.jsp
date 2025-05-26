@@ -9,7 +9,12 @@
 <form action="#" method="post">
     <label for="inputValeur">Saisir le nom d'une tache : </label>
     <input type="text" id="inputValeur" name="valeur">
+    </br>
+    <label for="inputDescription">Saisir le description du tache : </label>
+    <input type="text" id="inputDescription" name="description">
+    </br>
     <input type="submit" value="Enregistrer">
+
 </form>
 
 <%! 
