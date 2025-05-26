@@ -17,28 +17,26 @@
     <%-- Division de la chaîne de chiffres séparés par des espaces --%>
     <% String[] tableauDeChiffres = chaine.split("\\s+"); %>
     <p>La tableau contient <%= tableauDeChiffres.length %> valeurs</br>
-    Chiffre 1 : <%= Integer.parseInt(tableauDeChiffres[0]) %></br>
-    Chiffre 2 : <%= Integer.parseInt(tableauDeChiffres[1]) %></br>
-    Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %>
     </p>
 
     <%-- Conversion to an numeric array--%>
     <%
-    int[] chiffres = new int[tableauDeChiffres.length];
-    for (int i = 0; i < tableauDeChiffres.length; i++) {
-        chiffres[i] = Integer.parseInt(tableauDeChiffres[i]);
-    }
+        int[] chiffres = new int[tableauDeChiffres.length];
+        for (int i = 0; i < tableauDeChiffres.length; i++) {
+            chiffres[i] = Integer.parseInt(tableauDeChiffres[i]);
     %>
+     Chiffre <%= i %> : <%= chiffres[i] %><br>
+    <% } %>
     
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 
-<p> Le carré de la première valeur est <%= chiffres[0] * chiffres[1] %> </p>
+<p> Le carré de la première valeur est <%= chiffres[0] * chiffres[0] %> </p>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
 
-<p> La somme des 2 premières valeur est <%= ((chiffres[0])+(chiffres[0])) %></p>
+<p> La somme des 2 premières valeur est <%= ((chiffres[0])+(chiffres[1])) %></p>
 
 <h2>Exercice 3 : La somme de toutes les valeurs</h2>
 <p>L'utilisateur peut à présent saisir autant de valeurs qu'il le souhaite dans champs de saisie.</br>
