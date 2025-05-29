@@ -27,11 +27,17 @@
         String nameTache;
         String description;
         String date;
+        boolean fini; 
 
         public Tache(String name, String desc, String date) {
             this.nameTache = name;
             this.description = desc;
             this.date = date;
+            this.fini = false;
+        }
+
+        public void markAsFini() {
+            this.fini = true;
         }
     }
 %>
@@ -71,15 +77,35 @@
         <p>Description : <%= newTache.description %></p>
         <p>Date : <%= newTache.date %></p>
 <br>
+
+<%
+    String doneIndexStr = request.getParameter("doneIndex");
+    if (doneIndexStr != null) {
+        int doneIndex = Integer.parseInt(doneIndexStr);
+        if (doneIndex >= 0 && doneIndex < tasks.size()) {
+            tasks.get(doneIndex).markAsFini();
+        }
+    }
+%>
+
 <h2>Liste des tâches :</h2>
 <ul>
 <% for (int i = 0; i < tasks.size(); i++) {
        Tache t = tasks.get(i);
 %>
-    <li>
+    <li style="<%= t.fini ? "color:gray; text-decoration:line-through;" : "" %>">
         <strong><%= t.nameTache %></strong><br>
         Description : <%= t.description %><br>
-        Date d’échéance : <%= t.date %>
+        Date d’échéance : <%= t.date %><br>
+        Statut : <%= t.fini ? "✅ Fait" : "⏳ À faire" %><br>
+
+        <!-- Form to mark as done -->
+        <% if (!t.fini) { %>
+        <form action="#" method="post" style="display:inline;">
+            <input type="hidden" name="doneIndex" value="<%= i %>">
+            <input type="submit" value="Marquer comme fait">
+        </form>
+        <% } %>
         <form action="#" method="post" style="display:inline;">
             <input type="hidden" name="deleteIndex" value="<%= i %>">
             <input type="submit" value="Supprimer">
