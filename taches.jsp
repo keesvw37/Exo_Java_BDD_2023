@@ -1,5 +1,4 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="javax.servlet.http.HttpSession" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html>
@@ -38,8 +37,6 @@
 %>
 
 <%
-    HttpSession session = request.getSession();
-
     // Get or create the list of tasks
     ArrayList<Tache> tasks = (ArrayList<Tache>) session.getAttribute("tasks");
     if (tasks == null) {
@@ -57,9 +54,9 @@
 
 
 %>
-        <p>Nom de la tâche : <%= tache.nameTache %></p>
-        <p>Description : <%= tache.description %></p>
-        <p>Date : <%= tache.date %></p>
+        <p>Nom de la tâche : <%= newTache.nameTache %></p>
+        <p>Description : <%= newTache.description %></p>
+        <p>Date : <%= newTache.date %></p>
 <br>
 <h2>Liste des tâches :</h2>
 <ul>
