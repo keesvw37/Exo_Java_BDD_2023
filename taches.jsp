@@ -63,6 +63,14 @@
         }
     }
 
+    String doneIndexStr = request.getParameter("doneIndex");
+    if (doneIndexStr != null) {
+        int doneIndex = Integer.parseInt(doneIndexStr);
+        if (doneIndex >= 0 && doneIndex < tasks.size()) {
+            tasks.get(doneIndex).markAsFini();
+        }
+    }
+
     String valeur = request.getParameter("valeur");
     String description = request.getParameter("description");
     String date = request.getParameter("date");
@@ -77,16 +85,6 @@
         <p>Description : <%= newTache.description %></p>
         <p>Date : <%= newTache.date %></p>
 <br>
-
-<%
-    String doneIndexStr = request.getParameter("doneIndex");
-    if (doneIndexStr != null) {
-        int doneIndex = Integer.parseInt(doneIndexStr);
-        if (doneIndex >= 0 && doneIndex < tasks.size()) {
-            tasks.get(doneIndex).markAsFini();
-        }
-    }
-%>
 
 <h2>Liste des tâches :</h2>
 <ul>
