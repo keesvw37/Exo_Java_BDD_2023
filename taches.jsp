@@ -44,6 +44,19 @@
         session.setAttribute("tasks", tasks);
     }
 
+    // Deletion handler
+    String deleteIndexStr = request.getParameter("deleteIndex");
+    if (deleteIndexStr != null) {
+        try {
+            int deleteIndex = Integer.parseInt(deleteIndexStr);
+            if (deleteIndex >= 0 && deleteIndex < tasks.size()) {
+                tasks.remove(deleteIndex);
+            }
+        } catch (NumberFormatException e) {
+            // invalid deleteIndex passed
+        }
+    }
+
     String valeur = request.getParameter("valeur");
     String description = request.getParameter("description");
     String date = request.getParameter("date");
@@ -60,11 +73,17 @@
 <br>
 <h2>Liste des tâches :</h2>
 <ul>
-<% for (Tache t : tasks) { %>
+<% for (int i = 0; i < tasks.size(); i++) {
+       Tache t = tasks.get(i);
+%>
     <li>
         <strong><%= t.nameTache %></strong><br>
         Description : <%= t.description %><br>
         Date d’échéance : <%= t.date %>
+        <form action="#" method="post" style="display:inline;">
+            <input type="hidden" name="deleteIndex" value="<%= i %>">
+            <input type="submit" value="Supprimer">
+        </form>
     </li><br>
 <% } %>
 </ul>
